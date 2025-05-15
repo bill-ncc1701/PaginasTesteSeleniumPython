@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Teste de Espera</title>
+    <style>
+        #hiddenElement {
+            display: none;
+            font-size: 20px;
+            color: blue;
+        }
+
+        #secondButton,
+        #thirdButton,
+        #fourthButton {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #fourthButton {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Espera com Explicit Wait</h1>
+    <button id="showButton">Clique para iniciar o teste</button>
+    <div id="hiddenElement">Este é o elemento que apareceu após 3 segundos!</div>
+    <button id="secondButton">Segundo Botão</button>
+    <button id="thirdButton">Terceiro Botão</button>
+    <button id="fourthButton" disabled>Quarto Botão</button>
+
+    <script>
+        document.getElementById('showButton').addEventListener('click', function() {
+            // Exibe um alert ao clicar no botão
+            alert('Você clicou no botão! O elemento será exibido em 3 segundos.');
+
+            // Exibir o elemento após 3 segundos
+            setTimeout(function() {
+                document.getElementById('hiddenElement').style.display = 'block';
+            }, 3000); // 3000 milissegundos = 3 segundos
+
+            // Alterar o texto do elemento após 5 segundos
+            setTimeout(function() {
+                document.getElementById('hiddenElement').innerText = 'Selenium Webdriver';
+            }, 5000); // 5000 milissegundos = 5 segundos
+
+            // Exibir o segundo botão após 10 segundos
+            setTimeout(function() {
+                document.getElementById('secondButton').style.display = 'block';
+            }, 10000); // 10000 milissegundos = 10 segundos
+
+            // Exibir o terceiro botão após 10 segundos
+            setTimeout(function() {
+                document.getElementById('thirdButton').style.display = 'block';
+            }, 10000); // 10000 milissegundos = 10 segundos
+        });
+
+        // Adicionar funcionalidade ao terceiro botão
+        document.getElementById('thirdButton').addEventListener('click', function() {
+            alert('Aguardando 5 segundos para habilitar o quarto botão.');
+
+            // Habilitar o quarto botão após 5 segundos
+            setTimeout(function() {
+                const fourthButton = document.getElementById('fourthButton');
+                fourthButton.disabled = false;
+                fourthButton.style.display = 'inline-block';
+            }, 5000); // 5000 milissegundos = 5 segundos
+        });
+    </script>
+
+    <!-- Botão no rodapé -->
+    <button id="footerButton" onclick="window.location.href='index.html'">Voltar ao Index</button>
+</body>
+</html>

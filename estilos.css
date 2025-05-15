@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    background-color: #e0f2f7; /* Um verde claro bem suave */
+    color: #388e3c; /* Um verde um pouco mais escuro para o texto principal */
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #66bb6a; /* Um verde um pouco mais vibrante para os títulos */
+}
+
+a {
+    color: #43a047; /* Verde para links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #2e7d32; /* Verde mais escuro ao passar o mouse */
+}
+
+ul {
+    list-style-type: square; /* Estilo da lista */
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #a5d6a7; /* Borda verde clara para campos de entrada e dropdowns */
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho do elemento */
+    width: 200px;
+}
+
+button {
+    background-color: #81c784; /* Verde para botões */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66bb6a; /* Verde mais escuro ao passar o mouse no botão */
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #a5d6a7;
+    background-color: #c8e6c9; /* Verde claro para a área de resultado */
+    border-radius: 4px;
+}
+
+.texto-exemplo {
+    color: #388e3c;
+    font-style: italic;
+    margin-top: 10px;
+}

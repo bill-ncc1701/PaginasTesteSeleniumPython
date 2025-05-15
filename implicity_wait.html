@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Implicity Wait</title>
+    <script>
+        // Função para exibir o checkbox após 5 segundos
+        function exibirCheckbox() {
+            setTimeout(() => {
+		const label = document.getElementById('checkbox-label');
+                const checkbox = document.getElementById('checkbox');
+		label.style.display = 'block';
+                checkbox.style.display = 'block';
+            }, 5000); // 5.000ms = 5 segundos
+        }
+    </script>
+</head>
+<body onload="exibirCheckbox()">
+    <h1>Teste com Selenium</h1>
+    <p>O checkbox será exibido em 5 segundos:</p>
+    <!-- Inicialmente, tanto o checkbox quanto o label estão ocultos -->
+    <label for="checkbox" id="checkbox-label" style="display: none;">Este é o checkbox</label>
+    <input type="checkbox" id="checkbox" name="checkbox" style="display: none;"> 
+
+    <!-- Botão no rodapé -->
+    <button id="footerButton" onclick="window.location.href='index.html'">Voltar ao Index</button>   
+</body>
+</html>
